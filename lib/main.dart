@@ -30,9 +30,19 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Sessions"),
+        title: const Text(
+          "Sessions",
+          style: TextStyle(
+            color: Colors.deepOrange,
+            fontWeight: FontWeight.bold,
+            fontSize: 30,
+          ),
+        ),
+        centerTitle: true,
+        elevation: 0.0,
+        backgroundColor: Colors.grey[850],
       ),
-      body: Container(), // This trailing comma makes auto-formatting nicer for build methods.
+      body: Container(),
     );
   }
 }
