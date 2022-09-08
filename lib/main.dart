@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sessions/widget/PlayButton.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +28,17 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+
+
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final bound = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -42,7 +53,17 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 0.0,
         backgroundColor: Colors.grey[850],
       ),
-      body: Container(),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            PlayButton(bound: bound)
+          ],
+        ),
+      ),
     );
   }
 }
+
+
